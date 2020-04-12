@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <p>Total Likes: {{ total }}</p> <!--すべての良いねの数-->
+    <like-component message="Like" @increment="incrementTotal"></like-component>
+    <like-component message="Good" @increment="incrementTotal"></like-component>
+    <like-component message="Great" @increment="incrementTotal"></like-component>
+    <like-component @increment="incrementTotal"></like-component>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
